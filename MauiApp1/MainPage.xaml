@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+    <Grid>
+        <CollectionView
+            x:Name="CollectionList"
+                  Margin="5,0">
+           <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1"
+                            Text="Hello World"
+                            FontAttributes="Bold"
+                            BackgroundColor="Red"  />
+                        <Entry Grid.Row="1"
+                            Grid.Column="1"
+                            FontAttributes="Italic"
+                            VerticalOptions="End"
+                            BackgroundColor="Green" 
+                            ReturnType="Done"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.Header>
+                <StackLayout>
+                    <BoxView HeightRequest="1000"
+                        BackgroundColor="Yellow"/>
+                </StackLayout>
+            </CollectionView.Header>
+            <CollectionView.Footer>
+                <StackLayout>
+                    <BoxView HeightRequest="1000"
+                        BackgroundColor="Black"/>
+                </StackLayout>
+            </CollectionView.Footer>
+        </CollectionView>
+    </Grid>
+</ContentPage>
